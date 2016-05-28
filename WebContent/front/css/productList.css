@@ -1,0 +1,177 @@
+@CHARSET "UTF-8";
+
+/* body{
+	font: 12px/150% Arial,Verdana,"\5b8b\4f53"; 
+} */
+
+img{
+	width:220px;
+	height:220px;
+}
+
+body{
+	font-family:"microsoft yahei";
+	color:#666;
+
+}
+
+#container{
+	position:relative;
+	width:100%;
+}
+
+#container1{
+	position:relative;
+	/* width:900px; */
+	
+	width:1050px;
+	/* height:40px; */
+	margin:0 auto;
+}
+
+.directory{
+	position:absolute;
+	top:5px;
+	/* left:140px; */
+	width:1050px;
+	/* height:40px; */
+	/* background-color: #F1F1F1; */
+}
+
+.directory .d-title{
+	margin-left: 20px;
+	margin-top: 10px;
+	font-family: "microsoft yahei";
+	/* font-size: 14px; */
+	/* color: #ffffff; */
+}
+.directory .d-cart{
+	
+}
+#container1 .p-main{
+	top:50px;
+	position:absolute;
+	width:1050px;
+	height:auto;
+	/* margin-left: 5px; */
+}
+
+#container1 .p-main .p-aside {
+	top:1px;
+	position:absolute;
+	width: 240px;
+	height: auto;
+	border:1px solid #dfdfdf;
+	/* background-color: #c0c0c0; */
+}
+
+#container1 .p-main .p-aside .p-title{
+	font-family: "microsoft yahei";
+	font-size: 14px;
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+#container1 .p-main .p-list {
+	position:absolute;
+	top:1px;
+	left:270px;
+	width: 810px;
+	height: auto;
+	/* background-color: #d8a2df; */
+}
+#container1 .p-main .wrap{
+	width: 240px;
+	height: 330px;
+	float: left;
+	border: 1px solid #ffffff;
+	/* margin: 5px; */
+	/* border: 1px solid #ffffff; */
+	/* background-color: #00ffff; */
+}
+
+#container1 .p-main .wrap .p-item{
+	width: 220px;
+	/* height: 416px */;
+	z-index:1;
+	position: absolute;
+	/* background: #ff00ff; */
+	/* border: 1px solid #dfdfdf; */
+	margin: 10px;
+}
+
+#container1 .p-main .wrap .p-item .p-img{
+	height: 220px;
+	padding: 0;
+}
+
+#container1 .p-main .wrap .p-item .p-price{
+	/* position: relative;
+	line-height: 22px; */
+	height: 22px;
+	margin-top:10px;
+	/* overflow: hidden; */
+	width: 100%;
+	/* margin: 0 0 8px; */
+	/* background-color: #c0c0c0; */
+}
+
+#container1 .p-main .wrap .p-item .p-price .J-price{
+	/* padding-left:20px; */
+	color: #e4393c;
+	font-size: 20px;
+}
+
+#container1 .p-main .wrap .p-item .p-price .J-price em{
+	font-size: 16px;
+}
+
+#container1 .p-main .wrap .p-item .p-price .J-price i{
+	font-style: normal;
+}
+
+#container1 .p-main .wrap .p-item .p-descr{
+	/* position:absolute; */
+	height: 20px;
+	line-height: 20px;
+}
+#container1 .p-main .wrap .p-item .p-descr em{
+	display: block;
+	height: 20px;
+	overflow:hidden;
+}
+
+#container1 .p-main .wrap .p-item .p-commit{
+	
+}
+
+#container1 .p-main .wrap .p-item .p-commit strong{
+
+	color: #a7a7a7;
+	font-weight: 400;
+}
+
+#container1 .p-main .p-list .ss{
+	margin-top:2px;
+	float: left;
+	width: 500px;
+	height: 33px;
+	padding-left: 200px;
+	padding-top: 10px;
+	/* padding-right: 20px; */
+	/* background-color: #F1F1F1; */
+}
+
+
+
+.search-info{
+	position:absolute;
+	top:50px;
+	/* left:140px; */
+	width:1050px;
+	height:400px;
+	text-align:center;
+	line-height:50px;
+	font-size:15px;
+	/* background-color: red; */
+}

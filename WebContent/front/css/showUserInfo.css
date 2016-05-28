@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+
+.show-main{
+	padding: 10px 20px 20px;
+}
+
+.show-main .item{
+	display: block;
+	margin-bottom: 20px;
+	line-height: 30px;
+}

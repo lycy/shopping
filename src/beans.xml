@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="
+    	http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+    	http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd ">
+	
+	
+	
+	<context:component-scan base-package="com.shopping"/> <!-- ioc注解 -->
+	
+	<!-- <aop:aspectj-autoproxy/>   切面 注解-->
+
+
+	
+	<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+	    <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+	    <property name="url" value="jdbc:mysql://localhost:3306/shopping"/>
+	    <property name="username" value="root"/>
+	    <property name="password" value="qaz965874"/>
+	</bean>
+	
+	<bean id="mySessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="myDataSource"/>
+        
+        <!--
+        <property name="annotatedClasses">
+            <list>
+                <value>com.shopping.model.User</value>
+                <value>com.shopping.model.Log</value>
+            </list>
+        </property>-->
+        
+        <property name="packagesToScan">
+        	<list>
+                <value>com.shopping.model</value>
+            </list>
+        </property>
+        
+        <property name="hibernateProperties">
+            <props>
+	            <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+	            <prop key="hibernate.show_sql">true</prop>
+	            <prop key="hibernate.format_sql">true</prop>
+	           <!-- <prop key="hibernate.current_session_context_class">thread</prop>-->
+	            <!--<prop key="hibernate.hbm2ddl.auto">update</prop> -->
+	            
+      		</props>
+        </property>
+    </bean>
+	
+	
+    <!-- 声明式事务管理 -->
+    <bean id="myTxManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="mySessionFactory"/>
+    </bean>
+    
+    <aop:config>
+    	<aop:pointcut id="bussinessService" expression="execution(public * com.shopping.service..*.*(..))"/>
+    	<aop:advisor pointcut-ref="bussinessService" advice-ref="txAdvice"/>
+    </aop:config>
+    
+    <tx:advice id="txAdvice" transaction-manager="myTxManager">
+		<tx:attributes>
+			<tx:method name="*" propagation="REQUIRED"/>
+		</tx:attributes>
+	</tx:advice>
+	
+	<!--<tx:annotation-driven transaction-manager="myTxManager"/>-->   <!-- 注解  声明式事务管理 -->
+	
+	
+	
+	<!--<bean id="hibernateTemplate" class="org.springframework.orm.hibernate5.HibernateTemplate">
+		<property name="sessionFactory" ref="mySessionFactory"></property>
+	</bean>--> 
+    	
+   
+
+   
+</beans>

@@ -1,0 +1,145 @@
+@CHARSET "UTF-8";
+
+/* html,body,p,h1,h2,h3,h4,h5,h6,form,input,textarea,select,button,fieldset,legend,img,ul,ol,li,dl,dt,dd,th,td,pre,blockquote{margin:0;padding:0}
+html{
+	height:100%;
+	webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;
+	-webkit-font-smoothing:antialiased
+}  */
+
+body{
+	font-family:"microsoft yahei";
+	color:#666666;
+}
+
+ img{
+ 	width:600px;
+ 	height:440px;
+ }
+
+
+.goods-class{
+	position:relative;
+	top:-40px;
+	width:100%;
+	height:auto;
+}
+.goods-menu{
+	position:relative;
+	/* width:900px; */
+	width:1050px;
+	/* height:40px; */
+	margin:0 auto;
+}
+
+
+.goods-main{
+	position:absolute;
+	left:150px;
+	/* width:760px; */
+	width:900px;
+	/* height:440px; */
+	/* background-color: #c0c0c0; */
+}
+
+
+.goods-main .main1{
+	position:absolute;
+	width:600px;
+	height:440px;
+	background-color: #8080c0;
+} 
+
+.goods-main .main2{
+	position:absolute;
+	left:610px;
+	width:290px;
+	height:440px;
+	/* background-color: #ff0080; */
+}
+
+
+
+.num{
+    position:absolute;
+    left:250px;
+    bottom:5px;
+}
+.main1 .num li{
+    float: left;
+    color: #FF7300;
+    text-align: center;
+    line-height: 16px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 3px 1px;
+    border: 1px solid #FF7300;
+    background-color: #fff;
+}
+.main1 .num li.on{
+    color: #fff;
+    line-height: 21px;
+    width: 21px;
+    height: 21px;
+    font-size: 16px;
+    margin: 0 1px;
+    border: 0;
+    background-color: #FF7300;
+    font-weight: bold;
+}
+
+.main2 .item{
+	/* position: relative; */
+	/* top:20px; */
+	height: 80px;
+	width:280px;
+	/* margin:15px; */
+	margin-top:15px;
+	padding:1px;
+	border: 1px solid #c20b01;
+	/* background-color: red; */
+}
+
+.main2 .item .item-img{
+	/* position:relative; */
+	float:left;
+	height: 80px;
+	width:80px;
+	/* padding:1px; */
+	/* background-color: red; */
+}
+
+.main2 .item img{
+	height: 78px;
+	width:78px;
+}
+.main2 .item .item-info{
+	/* position:relative;
+	left:80px; */
+	float:left;
+	height: 80px;
+	width:200px;
+	/* line-height: 40px; */
+	/* background-color: #c0c0c0; */
+}
+
+.main2 .item .price{
+	float: left;
+	height: 40px;
+	width:200px;
+	line-height: 50px;
+	/* background-color: red; */
+}
+.main2 .item .price em{
+	color: #c20b01;
+}
+.main2 .item .descr{
+	float: left;
+	height: 40px;
+	width:200px;
+	/* background-color: #c0c0c0; */
+	overflow: hidden;
+}

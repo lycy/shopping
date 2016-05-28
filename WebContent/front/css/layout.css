@@ -1,0 +1,56 @@
+@CHARSET "UTF-8";
+
+body{
+	font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+}
+
+A { 
+color: #666666; 
+} 
+A:link { 
+color: #666666; 
+text-decoration: none; 
+} 
+A:visited { 
+color: #666666; 
+text-decoration: none; 
+} 
+A:hover { 
+color: #C90809; 
+text-decoration: none; 
+} 
+
+
+ul, li {
+	list-style: none;
+}
+
+#container { 
+	position:relative;
+	width:100%;
+    background-color: #c4e0e1221221221;
+}
+
+
+
+.index-footer{
+	position:relative;
+	width:100%;
+}
+
+.footer {
+	position:relative;
+	top:400px;
+	/* width:900px; */
+	width:1050px;
+	height:50px;
+	margin:0 auto;
+	background-color: blue;
+}
+
+
+
+
+
+
+

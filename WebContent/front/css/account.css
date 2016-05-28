@@ -1,0 +1,253 @@
+@CHARSET "UTF-8";
+
+
+body{
+	font-family:"microsoft yahei";
+	color:#666;
+	background-color: #F1F1F1;
+}
+
+.account{
+	position:relative;
+	width:100%;
+	/* height:458px; */
+	height:auto;
+	/* background-color: #F1F1F1; */
+}
+.account1{
+	position:relative;
+	/* width:900px; */
+	width:1050px;
+	/* height:40px; */
+	margin:0 auto;
+	/* background-color: #F1F1F1; */
+}
+
+.account-menu{
+	position:absolute;   /*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。 
+							元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。*/
+	/* top:0;
+	left:0; */
+	width:140px;
+	height:auto;
+	/* border-right:1px solid red; */
+	/* background-color: #F1F1F1; */
+	background-color: #ffffff;
+}
+
+.account-main{
+	position:absolute;
+	/* left:140px; */
+	/* width:910px; */
+	width:1050px;
+	height:440px;
+	background-color: #ffffff;
+}
+
+.account-menu .item{
+	position:relative;
+	/* top:20px; */
+	margin-top:20px;
+	width:140px;
+	height:auto;
+	background-color: #ffffff;
+}
+
+.account-menu .item .title{
+	width:140px;
+	height:30px;
+	text-align: center;
+	font-size: 17px;
+	font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+}
+
+
+.account-menu .item .info{
+	width:140px;
+	/* height:30px; */
+	text-align: center;
+	font-size: 12px;
+}
+
+.account-menu .item .info li{
+	margin-top: 5px;
+}
+
+
+.account-main .main-info{
+	position: relative;
+	left:140px;
+	width:910px;
+	border-left:1px solid #F1F1F1;
+	background-color: #ffffff;
+	/* padding: 10px 20px 20px; */
+}
+
+.account-main .showUserInfo{
+	
+}
+.showUserInfo .title{
+	position: relative;
+	left:30px;
+	font-size: 50px;
+	color:#666666;
+	font: 23px/150% Arial,Verdana,"\5b8b\4f53";
+	
+}
+ .showUserInfo .item{
+	display: block;
+	margin-top:20px;
+	/* margin-bottom: 20px; */
+	/* margin-left:10px; */
+	line-height: 30px;
+	color:#666666;
+}
+
+
+ .showUserInfo .item span{
+	float: left;
+	height: 18px;
+	line-height: 18px;
+	padding: 6px 0;
+	width: 100px;
+	text-align: right;
+}
+.showUserInfo .item .fl{
+	flaot:left;
+}
+
+
+.showOrder .order-title{
+	position:relative;
+	width:910px;
+	height:30px;
+	line-height: 35px;
+	left:30px;
+	/* font: 12px/150% Arial,Verdana,"\5b8b\4f53"; */
+	
+}
+.showOrder .order-title em{
+	font-size: 16px;
+	color: #e4393c;
+	font-weight: 700;
+}
+
+.showOrder .order-info{
+	position:relative;
+	width:910px;
+}
+
+.showOrder .order-info .info-title{
+	width:860px;
+	height:35px;
+	margin-left:10px;
+	/* text-align:justify; */
+	line-height: 35px;
+	background-color: #F1F1F1;
+}
+
+/* .showOrder .order-info .info-title .info-title1{
+	margin-left: 450px;
+} */
+.showOrder .order-info .info-title .info-title2{
+	margin-left: 460px;
+}
+.showOrder .order-info .info-title .info-title3{
+	margin-left: 80px;
+}
+
+.showOrder .order-info .info-title .info-title4{
+	margin-left: 80px;
+}
+
+
+.showOrder .info-list{
+	margin-left:10px;
+	width:860px;
+	height:auto;
+}
+
+
+.showOrder table {
+	/* padding: 0 20px; */
+	width: 100%;
+	background: #fffdf4;
+	font-size: 14px;
+	border: 2px solid #F1F1F1;
+	border-top: 0;
+}
+
+.showOrder table td {
+	border-bottom: 1px dashed #B2B1AA;
+	height: 80px;
+	/* vertical-align: middle; */
+	padding: 30px 5px 20px 5px;
+}
+
+.changeUserInfo .title{
+	position: relative;
+	left:250px;
+	font-size: 50px;
+	color:#666666;
+	font: 23px/150% Arial,Verdana,"\5b8b\4f53";
+}
+
+.changeUserInfo .change-form{
+	position:absolute;
+	left:120px;
+	/* top:20px; */
+	width:400px;
+	/* height:100px;
+	background-color: red; */
+}
+
+ .change-form .item{
+	position: relative;
+	border: solid 1px #ddd;
+	width: 400px;
+	height: 40px;
+}
+
+
+.change-form .item-top{
+	/* float:left; */
+	color: #ff4242;
+	height: 27px;
+	font-size: 15px;
+	padding-top: 5px;
+	padding-left: 10px;
+}
+
+.change-form .item label{
+	float: left;
+	width: 90px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color:#9e9e9e;
+	/* padding-left: 20px; */
+}
+
+ .change-form .item .item-itext{
+	float: left;
+	width: 300px;
+	height:38px;
+	/* border-left: solid 1px #ddd; */
+	border: 0;
+}
+
+
+
+  .change-form  .item-submit{
+ 	float:left;
+	height: 40px;
+	width: 200px;
+	line-height:40px;
+	text-align: center;
+	background-color: #b52b27;
+ }
+ 
+  .change-form .item .item-submit span{
+  	font-size: 20px;
+	color: #ffffff;
+  } 

@@ -1,0 +1,29 @@
+[{   
+    "id":1,   
+    "text":"用户管理",   
+    "state":"closed",   
+    "children":[{   
+        "text":"用户列表",   
+        "attributes":{   
+            "url":"admin/userList.jsp"
+        }
+    }]  
+},{   
+    "text":"商品类别管理",   
+    "state":"closed",   
+    "children":[{   
+     	"text":"类别列表",
+     	"attributes":{   
+            "url":"admin/categroyList.jsp"
+        }   
+    }]   
+},{   
+    "text":"商品管理",   
+    "state":"closed",   
+    "children":[{   
+     	"text":"商品列表",
+     	"attributes":{   
+            "url":"admin/productList.jsp"
+        }   
+    }]   
+}] 

@@ -1,0 +1,158 @@
+@CHARSET "UTF-8";
+
+
+
+body{
+	font-family: "microsoft yahei";
+}
+
+
+A { 
+color: #666666; 
+} 
+A:link { 
+color: #666666; 
+text-decoration: none; 
+} 
+A:visited { 
+color: #666666; 
+text-decoration: none; 
+} 
+A:hover { 
+color: #C90809; 
+text-decoration: none; 
+}
+
+
+#container{
+	position:relative;
+	width:100%;
+}
+
+#container1{
+	position:relative;
+	/* width:900px; */
+	width:700px;
+	/* height:40px; */
+	margin:0 auto;
+	/* background-color: red; */
+}
+
+
+
+.register-header{
+	position:relative;
+	/* left:400px; */
+	/* width:900px; */
+	/* width:1050px; */
+	height:100px;
+	/* background-color: red; */
+}
+
+
+.register-header .logo{
+	float:left;
+    width: 256px;
+    height: 100px;
+    background-image:url(../front_image/2.jpg);	
+}
+
+.register-header .logo-title{
+	float: left;
+	height: 34px;
+	line-height: 34px;
+	font-size: 18px;
+	/* color: #000; */
+	border-left: solid 1px #bbb;
+	margin-left: 25px;
+	padding-left: 25px;
+	margin-top: 34px;
+}
+
+.register-main{
+	position:relative;
+	width:700px;
+	/* height:auto; */
+}
+
+.register-main .register-form{
+	position:absolute;
+	left:120px;
+	width:400px;
+	/* height:100px;
+	background-color: red; */
+}
+
+ .item{
+	position: relative;
+	border: solid 1px #ddd;
+	width: 400px;
+	height: 40px;
+}
+
+
+.item-top{
+	/* float:left; */
+	color: #ff4242;
+	height: 27px;
+	font-size: 15px;
+	padding-top: 5px;
+	padding-left: 10px;
+}
+
+.item label{
+	float: left;
+	width: 90px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color:#9e9e9e;
+	/* padding-left: 20px; */
+}
+
+ .item .item-itext{
+	float: left;
+	width: 300px;
+	height:38px;
+	/* border-left: solid 1px #ddd; */
+	border: 0;
+}
+
+.item .item-sex{
+	padding-top: 10px;
+}
+
+.item .item-sex span{
+	color:#9e9e9e;
+}
+
+
+ .item .item-submit{
+ 	float:left;
+	height: 40px;
+	width: 400px;
+	line-height:40px;
+	text-align: center;
+	background-color: #b52b27;
+ }
+ 
+  .item .item-submit span{
+  	font-size: 20px;
+	color: #ffffff;
+  } 
+  
+  
+  
+ ul.errorMessage {
+	list-style-type: none;
+	display: inline;
+	margin: 0px;
+	padding: 0 0 0 10px;
+	
+}
+ul.errorMessage li {
+	list-style-type: none;
+	display: inline;
+	/* color: #ff0000; */
+	font-size: 11px;
+}

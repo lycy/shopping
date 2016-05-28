@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+  <!--   <constant name="struts.enable.DynamicMethodInvocation" value="false" /> -->
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+	<!--<constant name="struts.i18n.encoding" value="UTF-8" />-->
+
+	<!-- 后台-->
+    <package name="admin" namespace="/admin" extends="json-default, struts-default">
+    	
+        <action name="User-*" class="com.shopping.action.UserAction" method="{1}">
+           <!-- <result name="update"> /admin/index.jsp </result>
+           	<result name="search"> /admin/index.jsp </result>
+           -->
+           <!--  <result name="delete">/admin/index.jsp</result>-->
+            
+            <result type="json" name="pageList" >
+            	<param name="root">
+            		resultJSON
+            	</param>
+            </result>
+             <result type="json" name="delete" >
+            	<param name="root">
+            		resultJSON
+            	</param>
+            </result>
+        </action>
+        
+        <action name="Categroy-*" class="com.shopping.action.CategroyAction" method="{1}">
+        	<!--<result name="add">/admin/index.jsp</result>
+            <result name="update"> /admin/index.jsp </result>
+            <result name="delete"> /admin/index.jsp </result>
+            <result name="search"> /admin/index.jsp </result>-->
+            <result type="json" name="pageList" >
+            	<param name="root">
+            		resultJsonA
+            	</param>
+            </result>
+        </action>
+        
+        <action name="Product-*" class="com.shopping.action.ProductAction" method="{1}">
+        	<!--<result name="add">/admin/index.jsp</result>-->
+           <!-- <result name="update"> /admin/index.jsp </result>-->
+           <!-- <result name="delete"> /admin/index.jsp </result>
+            <result name="search"> /admin/index.jsp </result>-->
+            <result type="json" name="pageList" >
+            	<param name="root">
+            		resultJson
+            	</param>
+            </result>
+            <result type="json" name="categroiesList" >
+            	<param name="root">
+            		resultJsonA
+            	</param>
+            </result>
+            
+            <result type="json" name="update" >
+            	<param name="root">
+            		resultJson
+            	</param>
+            </result>
+            
+            <result type="json" name="delete" >
+            	<param name="root">
+            		resultJson
+            	</param>
+            </result>
+            
+            <result type="json" name="add" >
+            	<param name="root">
+            		resultJson
+            	</param>
+            </result>
+            
+            <result type="json" name="search" >
+            	<param name="root">
+            		resultJson
+            	</param>
+            </result>
+            
+            
+        </action>
+        
+        <action name="Admin-*" class="com.shopping.action.AdminAction" method="{1}">
+           	<result name="loginOk" type="redirect"> /admin/index.jsp </result>
+            <result name="loginError" type="redirect"> /admin/login.jsp </result>
+        </action>
+        
+    </package> 
+  
+  
+  	<!-- 前台-->
+    <package name="front" namespace="/front" extends="json-default, struts-default">
+        <action name="User-*" class="com.shopping.action.UserAction" method="{1}">
+        	 <!-- <result name="loginOk" type="redirect"> /front/index_text/index.jsp </result>
+            <result name="loginError" type="redirect"> ${#url} </result> -->
+            
+            <result name="quit" type="redirect"> /front/index.jsp </result>
+            
+            <!-- <result name="update"> /front/account.jsp </result>-->
+           <!-- <result name="input"> /front/index_text/account.jsp </result>-->
+           
+           
+          	<!--<result name="register" type="json"> 
+           		<param name="root">
+            		resultJSON 
+            	</param>
+           	</result> -->
+           	
+           	<result name="registerOk" type="redirect">
+           		/front/index.jsp
+           	</result> 
+           	<result name="input">
+           		/front/register.jsp
+           	</result> 
+           	
+           	<result name="login" type="json"> 
+           		<param name="root">
+            		resultJSON 
+            	</param>
+           	</result> 
+           	
+            <!--	<result name="register">
+           		/front/index_text/index.jsp
+           	</result>-->
+  
+        </action>
+        
+        <action name="Categroy-*" class="com.shopping.action.CategroyAction" method="{1}">
+        	 <!--<result name="list">  
+        		 <param name="xx">
+            		${categroies} 
+            	</param>
+        	</result>-->
+  
+        </action>
+        
+        <action name="Product-*" class="com.shopping.action.ProductAction" method="{1}">
+        	<result name="list">/front/productList.jsp</result>
+        	<result name="product">/front/product.jsp</result>
+        	<result name="frontSearch">/front/search.jsp</result> 
+        	
+        </action>
+        
+        <action name="Cart-*" class="com.shopping.action.CartAction" method="{1}">
+        	<result name="list" type="redirect">/front/cart.jsp</result>
+        	<result name="statementOk" type="redirect">/front/statementOk.jsp</result>
+        	<result name="statementError" type="redirect">/front/statementError.jsp</result>
+        	<result name="cartNumberChange" type="json"> 
+           		<param name="root">
+            		resultJson 
+            	</param>
+           	</result> 
+           	<result name="delete" type="json"> 
+           		<param name="root">
+            		resultJson 
+            	</param>
+           	</result> 
+           	<!--<result name="cartdelete">       
+				/front/index_text/cart.jsp
+           	</result> -->
+        </action>
+        
+        
+        
+    </package> 
+    
+    <!--<package name="admin" namespace="/admin" extends="json-default">
+        <action name="*-*" class="com.swu.shopping.action.{1}Action" method="{2}">
+            <result type="json" name=""></result>
+        </action>
+    </package>  -->
+
+    <!-- Add packages here -->
+
+</struts>
